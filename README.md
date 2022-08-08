@@ -15,5 +15,7 @@
 ### 주요 기능
 
 - addEventListener()
-  input.addEventListen("input", function() {
-  });
+
+  input.addEventListener("input", function() {
+
+  })
