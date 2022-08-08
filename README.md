@@ -16,6 +16,8 @@
 
 - addEventListener()
 
+```
   input.addEventListener("input", function() {
 
   })
+```
