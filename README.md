@@ -7,6 +7,7 @@
 1. temperature_converter
 2. flip_card
 3. js_page
+4. page_transition_basic
 
 ---
 
@@ -101,4 +102,44 @@ var article = document.getElementById("art");
 
 article.dataset.columns // "3"
 article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
+```
+
+### page_transition_basic
+
+### 구현 아이디어
+
+1. <body> 안에 <div>를 하나 만들어두고 classList을 통해 is-active 를 add / remove
+2. is-active 상태의 css 속성중 opacity 값을 1로 둠
+3. <Nav>의 각 항목을 선택하면 <div> 가 등장하면서 setTimeout을 통해 0.5s 뒤 사라짐
+
+### 주요기능
+
+- e.preventDefault();
+
+```
+사용하는 경우
+1. a 태그를 눌렀을때 href 링크로 이동하지 않게 할 경우
+2. form 안에 submit 버튼을 눌렀을때 페이지가 새로고침 되지 않도록 할 경우
+```
+
+- setTimeout()과 setInterval()
+
+```
+setTimeout() : 일정 시간이 지난 후에 함수를 실행
+예시)
+  function sayHi() {
+    alert("hello");
+  }
+  setTimeout(sayHi, 1000);
+  setTimeout(()=>alert("hi"), 1000); // 익명 화살표 함수 사용
+  // setTimeout(sayHi(), 1000);
+  // 잘못된 방법, 함수의 참조값을 넘겨야하는데 위는 함수 실행 결과가 전달됨
+setInterval() : 일정 시간 간격을 두고 함수를 실행
+```
+
+- window.location.href
+
+```
+특정 URL로 이동시키는것
+예시) window.location.href = "http://www.naver.com";
 ```
