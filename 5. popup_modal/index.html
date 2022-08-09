@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS CSS popul modal</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="button large popup-button" data-target="#popup-main">
+        Main Popup
+      </div>
+      <div class="button large popup-button" data-target="#popup-secondary">
+        secondary Popup
+      </div>
+    </div>
+
+    <div class="popup" id="popup-main">
+      <div class="popup-overlay popup-button" data-target="#popup-main"></div>
+      <div class="popup-inner">
+        <h2>Popup Main Title</h2>
+        <h3>Main Subtitle</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+          numquam!
+        </p>
+        <button class="button popup-button" data-target="#popup-main">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-secondary">
+      <div
+        class="popup-overlay popup-button"
+        data-target="#popup-secondary"
+      ></div>
+      <div class="popup-inner">
+        <h2>Popup Secondary Title</h2>
+        <h3>Secondary Subtitle</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+          numquam!
+        </p>
+        <button class="button popup-button" data-target="#popup-secondary">
+          Close
+        </button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
