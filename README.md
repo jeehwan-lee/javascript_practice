@@ -8,6 +8,8 @@
 2. flip_card
 3. js_page
 4. page_transition_basic
+5. popup_modal
+6. drag_and_drop
 
 ---
 
@@ -89,7 +91,7 @@
 - dataset : 어느 엘리먼트든 data-로 시작하는 속성을 가져올 수 있음.
 
 ```
- <article
+<article
   id="art"
   data-columns="3">
 </article>
@@ -152,13 +154,13 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
 
 ```
 1. popup-overlay 클래스를 갖는 <div> 를 만든다.
-   1-1. overlay는 modal의 배경(회색)을 보여주는 역할
+1-1. overlay는 modal의 배경(회색)을 보여주는 역할
 2. popup-inner 클래스를 갖는 <div>도 만든다.
 2. inner 는 modal의 내용이 들어가있음
 3. 버튼을 누를때 overlay와 inner 가 보였다가 사라졌다가를 통해 Modal 구현
 4. Click 되는 버튼의 data-target 을 두고 해당 target의 id를 갖는 <div class="pop">
    모달을 active
-   4-1. 버튼뿐만 아니라 overlay를 클릭했을때도 modal이 사라져야하므로 동일하게 data-target 설정
+4-1. 버튼뿐만 아니라 overlay를 클릭했을때도 modal이 사라져야하므로 동일하게 data-target 설정
 ```
 
 ## 6. drag_and_drop
@@ -180,6 +182,9 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
 - addEventListener('dragstart', function());
 
 ```
-- dragstart 이벤트는 선택한 요소를 드래그하기 시작할때 발생
-- dragend 이벤트는 드래그가 끝날때 발생
+- dragstart : 선택한 요소를 드래그하기 시작할때 발생
+- dragend : 드래그가 끝날때 발생
+- dragenter : 드래그한 요소가 해당 대상 위에 올라갔을때 발생
+- drangover : 드래그한 요소가 대상 위로 지나갈때(매 수백 밀리초마다 발생)
+- drop : 드래그한 요소가 해당 대상 위에 드롭했을때 발생
 ```
