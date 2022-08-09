@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BackFace</title>
+    <style>
+      .jb {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 200px;
+        height: 150px;
+        margin: 100px;
+        background-color: orange;
+        transition: 2s;
+      }
+
+      .jb1 {
+        backface-visibility: visible;
+      }
+
+      .jb2 {
+        backface-visibility: hidden;
+      }
+
+      input:checked ~ .jb {
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" />
+    <div class="jb jb1">visible</div>
+    <div class="jb jb2">hiddle</div>
+  </body>
+</html>
