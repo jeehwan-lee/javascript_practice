@@ -11,7 +11,7 @@
 
 ---
 
-## temperature_converter
+## 1. temperature_converter
 
 ### 주요 기능
 
@@ -23,7 +23,7 @@
   })
 ```
 
-## flip_card
+## 2. flip_card
 
 ### 주요기능
 
@@ -82,7 +82,7 @@
   * backface.html 참고
 ```
 
-## js_page
+## 3. js_page
 
 ### 주요기능
 
@@ -104,7 +104,7 @@ article.dataset.columns // "3"
 article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
 ```
 
-## page_transition_basic
+## 4. page_transition_basic
 
 ### 구현 아이디어
 
@@ -146,17 +146,40 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
   예시) window.location.href = "http://www.naver.com";
 ```
 
-## popup_modal
+## 5. popup_modal
 
 ### 구현 아이디어
 
 ```
 1. popup-overlay 클래스를 갖는 <div> 를 만든다.
-1-1. overlay는 modal의 배경(회색)을 보여주는 역할
+   1-1. overlay는 modal의 배경(회색)을 보여주는 역할
 2. popup-inner 클래스를 갖는 <div>도 만든다.
 2. inner 는 modal의 내용이 들어가있음
 3. 버튼을 누를때 overlay와 inner 가 보였다가 사라졌다가를 통해 Modal 구현
 4. Click 되는 버튼의 data-target 을 두고 해당 target의 id를 갖는 <div class="pop">
    모달을 active
-4-1. 버튼뿐만 아니라 overlay를 클릭했을때도 modal이 사라져야하므로 동일하게 data-target 설정
+   4-1. 버튼뿐만 아니라 overlay를 클릭했을때도 modal이 사라져야하므로 동일하게 data-target 설정
+```
+
+## 6. drag_and_drop
+
+### 구현 아이디어
+
+1. addEventListenr 에서 통해 현재 선택된 draggedItem을 가져옴
+   1-1. dragstart 때 현재 선택한 draggedItem display를 none 으로 해서 없앰
+2. 각 list 박스로 draggedItem 이 Drop 될때 해당 list에 append를 통해 draggedItem 을 줌
+
+### 주요기능
+
+- flex(css)
+
+```
+- https://studiomeal.com/archives/197 참고
+```
+
+- addEventListener('dragstart', function());
+
+```
+- dragstart 이벤트는 선택한 요소를 드래그하기 시작할때 발생
+- dragend 이벤트는 드래그가 끝날때 발생
 ```
