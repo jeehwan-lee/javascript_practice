@@ -33,6 +33,9 @@
   : selector의 구체적인 그룹과 일치하는 document의 첫번째 엘리먼트 반환
   예시) element = document.querySelector(selectors);
 
+  : selector() 매개변수로 []를 넣어주면 해당 노드의 속성값에 접근
+  예시) document.quertSelect('[data-page = 1]');
+
 - querySelectorAll
   : querySelector와 사용방법은 비슷하며, 해당하는 요소들은 nodeList로 반환
 
