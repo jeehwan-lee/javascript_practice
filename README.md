@@ -167,9 +167,11 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
 
 ### 구현 아이디어
 
+```
 1. addEventListenr 에서 통해 현재 선택된 draggedItem을 가져옴
    1-1. dragstart 때 현재 선택한 draggedItem display를 none 으로 해서 없앰
 2. 각 list 박스로 draggedItem 이 Drop 될때 해당 list에 append를 통해 draggedItem 을 줌
+```
 
 ### 주요기능
 
@@ -187,4 +189,51 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
 - dragenter : 드래그한 요소가 해당 대상 위에 올라갔을때 발생
 - drangover : 드래그한 요소가 대상 위로 지나갈때(매 수백 밀리초마다 발생)
 - drop : 드래그한 요소가 해당 대상 위에 드롭했을때 발생
+```
+
+## 7. music_app
+
+### 구현 아이디어
+
+- CSS
+
+```
+1. @media를 통해 화면이 player <div>의 width 414px 미만으로 작아지면
+   min-height 를 100vh로 만들어 화면이 꽉 차게 만듬
+```
+
+- Javascript
+
+```
+1. play 버튼을 누르면 <i>의 클래스가 바뀜 fa-play에서 fa-pause
+1-1. 또한 현재 currnent_song_index 값이 증가하거나 감소
+2. current_song_index를 통해 songs 데이터에서 song 데이터를 가져와서 화면에 랜더링 및 재생
+```
+
+### 주요기능
+
+- :before / :after (가상요소)
+
+```
+- 해당 엘리먼트의 앞 또는 뒤에 content가 배치됨
+- content는 복사가 불가능함.
+```
+
+- audio 태그
+
+```
+1. HTML에서 audio 태그를 사용하는 방법
+  예시) <audio src="sound.mp3" autoplay loop >오디오 지원되지 않는 브라우저</audio>
+      // audio태그를 지원하지 않는 브라우저는 태그 안의 텍스트가 노출된다.
+  - audio 태그의 속성 : src, autoplay, loop, controls, muted
+```
+
+```
+2. Javascript에서 audio 태그를 사용하는 방법
+   예시)
+      const myAudio = document.getElementById("myAudio");
+
+      myAudio.play();
+      myAudio.pause();
+  - 매서드 : play(), pause(), load()
 ```
