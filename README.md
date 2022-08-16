@@ -268,10 +268,13 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
 
 ### 구현 아이디어
 
-- Javascript
+- CSS
 
 ```
 - 스크롤을 할때마다 현재
+1. X 표시의 경우 셀 하나에 before과 after를 통해 대각선을 각각 그려서 X를 만듬
+2. O 표시의 경우 셀 하나에 before를 통해 사각형을 만든 후 border-radius:50% 로 O 만듬
+3. section에 board turn-o 클래스를 부여해서 각 턴별로 O또는 X가 그려지도록 CSS 작성
 ```
 
 ### 주요기능
