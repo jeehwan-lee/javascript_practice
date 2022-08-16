@@ -237,3 +237,68 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
       myAudio.pause();
   - 매서드 : play(), pause(), load()
 ```
+
+## 8. scroll_progress_bar
+
+### 구현 아이디어
+
+- Javascript
+
+```
+- 글의 전체 높이에서 스크롤되어 내려간만큼의 높이를 비율로 환산하여,
+  header에 표시
+```
+
+### 주요기능
+
+- scroll 관련 기능
+
+```
+1. scrollHeight : 스크롤하지 않았을때 전체 높이를 가져옴
+   (화면 밖으로 빠져나간 부분까지 포함한 전체 글의 길이/높이)
+2. clientheight : 눈에 보이는 만큼의 높이를 가져옴
+   (현재 화면에서 보이는 height)
+3. scrollTop : 스크롤되어 올라간 만큼의 높이를 가져옴
+   (글의 맨 처음부터 현재 화면에 보이는 부분까지의 길이)
+
+* 참고 : https://devbirdfeet.tistory.com/228
+```
+
+## 9. Tic_Tac_toe
+
+### 구현 아이디어
+
+- Javascript
+
+```
+- 스크롤을 할때마다 현재
+```
+
+### 주요기능
+
+- addEventListner
+
+```
+1. addEventLister의 세번째 인자
+  예시)
+    element.addEventListenr('click', doSome, {
+      capture:false,
+      once:true,
+      passive:false
+    });
+
+- capture : 이벤트 버블링이나 캡쳐링 사용 여부
+- once : true로 되어있으면 이벤트 딱 한번만 발생
+   -> removeEventListener()를 사용하지 않아도 됨.
+- passive : 콜백함수 내부에 preventDefault()가 있더라도 실행 안됨
+```
+
+- Array.prototype.every() / some()
+
+```
+1. arr.every((item) => item.age >5)
+: 모든 조건이 만족하는지 체크하며, 하나라도 false이면 false 반환
+
+2. arr.some((item) => item.age > 5)
+: 하나라도 true가 발생하면 true 반환
+```
