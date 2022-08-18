@@ -305,3 +305,39 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
 2. arr.some((item) => item.age > 5)
 : 하나라도 true가 발생하면 true 반환
 ```
+
+## 10. color_palette
+
+### 구현 아이디어
+
+- Javascript
+
+```
+- Color Class 를 만들어서 Class 안의 method를 통해 조작
+- Method
+  1. setHex() : hex값을 통해 background 와 input에 값 전달
+  2. setLocked() : 해당 클래스가 lock 또는 open 됬을때 세팅
+  3. toggleLock() : 해당 클래스를 lock or open
+  4. generateHex() : hex값 랜덤 생성
+  5. copyToClipboard() : 해당 hex값 복사
+```
+
+### 주요기능
+
+- HTMLElement method
+
+```
+- HTML Element의 method 는 blur, click, focus 3가지 있음
+  1. blur : 포커스된 요소를 포커스 해제
+  2. click : 해당 요소로 마우스 클릭 이벤트를 전달
+  3. focus : 해당 요소에 포커스 생성
+
+```
+
+-document.execCommand()
+
+```
+- 예시)
+    bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
+- 참고 : https://developer.mozilla.org/ko/docs/Web/API/Document/execCommand
+```
