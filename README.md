@@ -358,3 +358,16 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
   4. localStorage.removeItem('counter');
   5. localStorage.length() : 전체 item 갯수
 ```
+
+## 12. Todo_list_1
+
+### 구현 아이디어
+
+- Javascript
+
+```
+1. form에 글을 입력한뒤 submit을 누름
+2. 해당 text를 저장한뒤 document.creatElement("div") 를 통해 element 생성
+3. 같은 방식으로 input과 button 을 생성 후 각 element들끼리 appendchild
+4. delete 버튼을 누를경우 removeChild를 통해 해당 element를 삭제
+```
