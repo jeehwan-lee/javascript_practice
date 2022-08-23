@@ -341,3 +341,20 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
     bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 - 참고 : https://developer.mozilla.org/ko/docs/Web/API/Document/execCommand
 ```
+
+## 11. Counter
+
+### 주요기능
+
+- localStorage
+
+```
+- localStorage를 사용하면 브라우저에 key-value값으로 저장하며, 데이터는 세션간에 공유되며 세션이 바뀌어도 유지
+- 예시)
+  const couter = 2;
+  1. localStorage.setItem('counter', counter);
+  2. const newCounter = localStorage.getItem('counter');
+  3. localStorage.clear();
+  4. localStorage.removeItem('counter');
+  5. localStorage.length() : 전체 item 갯수
+```
