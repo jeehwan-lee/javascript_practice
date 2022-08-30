@@ -371,3 +371,27 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
 3. 같은 방식으로 input과 button 을 생성 후 각 element들끼리 appendchild
 4. delete 버튼을 누를경우 removeChild를 통해 해당 element를 삭제
 ```
+
+## 13. Timer
+
+### 구현 아이디어
+
+- Javascript
+
+```
+1. SetInterval 함수를 사용해서 1초마다 숫자 변경
+2. stop과 reset을 누르면 clearInterval()을 통해 timer 정지
+```
+
+### 주요기능
+
+- scss
+
+```
+- scss는 css전처리기 (즉, css가 만들어지기 전에 이런저런 일들을 먼저 처리)
+- scss를 css로 컴파일하기 위해 node-sass 설치
+- scss를 css로 변환 (해당 디렉토리로 이동 후 아래 명령어 실행)
+  예시) sass style.scss style.css
+- scss watch 옵션을 넣으면 scss가 수정될때 자동으로 컴파일
+  예시) sass -watch style.scss style.css
+```
