@@ -349,6 +349,7 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
 - localStorage
 
 ```
+- session이 끝나도 데이터가 삭제되지 않음(여러개의 탭이나 창끼리 공유)
 - localStorage를 사용하면 브라우저에 key-value값으로 저장하며, 데이터는 세션간에 공유되며 세션이 바뀌어도 유지
 - 예시)
   const couter = 2;
@@ -357,6 +358,15 @@ article.getAttribute('data-columns') // "3" 이렇게도 가져올 수 있음
   3. localStorage.clear();
   4. localStorage.removeItem('counter');
   5. localStorage.length() : 전체 item 갯수
+
+- localStorage 에 저장되는 데이터들은 문자열 데이터들만 저장됨
+```
+
+- sessionStorage
+
+```
+- 웹 페이지의 session이 끝나면 데이터가 지워짐(각 탭이나 창 혼자만 사용)
+- 사용법은 localStorage와 같음
 ```
 
 ## 12. Todo_list_1
